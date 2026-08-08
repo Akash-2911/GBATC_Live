@@ -1,29 +1,28 @@
-# GBTAC landing page
+# GBTAC Energy Visualization
 
-Plain HTML/CSS/JS, no build step. Deploys directly to GitHub Pages.
+## What this project is
 
-## Files
+A greenhouse collects years of sensor data in Excel files. This data was sitting unused.
 
-- `index.html` — page structure
-- `style.css` — all styling
-- `script.js` — save/bookmark popover logic
-- `manifest.json` — lets the "Add to Home Screen" icon and name show correctly on Android
-- `assets/` — icon, demo gif, and the greenhouse photo (`GH.png`) live here
+We built a system that turns that raw data into six interactive dashboards, plus an AI assistant that can answer questions, write summaries, and forecast future energy use. The whole thing is secured with role-based access so only the right people see the right data.
 
-## Things to fill in
+In simple words: we gave a greenhouse a voice. Excel files go in, clear answers come out.
 
-1. **Live demo** — replace the placeholder `<div class="demo-placeholder">` block with:
-   ```html
-   <img src="assets/demo.gif" alt="Live demo preview">
-   ```
-   and update `href="#"` on the "View live demo" button to your real `app-gbtac-dev` URL.
-2. **Icons** — add `assets/icon-192.png` and `assets/icon-512.png` (square, your logo) so the home screen icon looks right instead of a blank default.
+## The team (GTA VI)
 
-## Deploy to GitHub Pages
+- **Akash** — Project manager, infrastructure, full-stack development
+- **Aryan Saini** — Backend and data pipeline (ETL)
+- **Vedant Patel** — Frontend and Power BI dashboards
+- **Mehdi Shokrani** — Faculty advisor
 
-1. Push this folder to a GitHub repo (or a subfolder of your existing `gbtac-visualization` repo).
-2. In the repo, go to Settings → Pages.
-3. Under "Source", pick the branch (e.g. `main`) and folder (`/` or `/docs`, wherever these files live).
-4. Save. GitHub gives you a URL like `https://akash-2911.github.io/gbtac-visualization/`.
+Built as a SAIT Software Development Technology capstone project.
 
-No build step, so any edit you push shows up on refresh.
+## What's in this repo
+
+This is the landing page for GBTAC, hosted on GitHub Pages. It has:
+
+- A "Meet the team" section with links to our LinkedIn
+- A live demo of the actual dashboard platform
+- A 3D look at the greenhouse (coming soon)
+
+For the full technical platform (dashboards, AI assistant, backend), see the main project repo.
