@@ -11,7 +11,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -20,6 +20,12 @@
 <header class="site-header">
   <div class="header-inner">
     <span class="logo">GBTAC<span class="logo-dot">.</span></span>
+    <nav class="site-nav" aria-label="Page sections">
+      <a href="#features">Features</a>
+      <a href="#demo">Demo</a>
+      <a href="#stack">Stack</a>
+      <a href="#team">Team</a>
+    </nav>
     <button class="bookmark-btn" id="bookmarkBtn" aria-haspopup="true" aria-expanded="false">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
       Save this page
@@ -34,82 +40,34 @@
 
 <main>
 
+  <!-- ---------- Hero ---------- -->
   <section class="hero">
-    <div class="hero-grid">
-
-      <div class="hero-col team-col">
-        <p class="eyebrow">Team GTA VI</p>
-        <h1 class="hero-heading">Meet the team</h1>
-        <p class="hero-sub">Built for the ARK Net Zero Campus, Aldersyde AB.</p>
-
-        <ul class="team-list">
-          <li class="team-card">
-            <div class="avatar" style="--avatar-tint: var(--c-amber);">AK</div>
-            <div class="team-info">
-              <p class="team-name">
-                Akash
-                <a href="https://www.linkedin.com/in/akashpatel29/" class="linkedin-icon" aria-label="Akash's LinkedIn" target="_blank" rel="noopener">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
-                </a>
-              </p>
-              <p class="team-role">PM · infrastructure · full-stack</p>
-            </div>
-          </li>
-          <li class="team-card">
-            <div class="avatar" style="--avatar-tint: var(--c-teal);">AS</div>
-            <div class="team-info">
-              <p class="team-name">
-                Aryan
-                <a href="https://www.linkedin.com/in/aryan-saini71/" class="linkedin-icon" aria-label="Aryan's LinkedIn" target="_blank" rel="noopener">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
-                </a>
-              </p>
-              <p class="team-role">Backend · ETL pipeline</p>
-            </div>
-          </li>
-          <li class="team-card">
-            <div class="avatar" style="--avatar-tint: var(--c-green);">VP</div>
-            <div class="team-info">
-              <p class="team-name">
-                Vedant
-                <a href="https://www.linkedin.com/in/vedant-patel-aa2729325/" class="linkedin-icon" aria-label="Vedant's LinkedIn" target="_blank" rel="noopener">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
-                </a>
-              </p>
-              <p class="team-role">Frontend · Power BI</p>
-            </div>
-          </li>
-          <li class="team-card team-card--muted">
-            <div class="avatar" style="--avatar-tint: var(--c-muted);">M</div>
-            <div class="team-info">
-              <p class="team-name">Mehdi</p>
-              <p class="team-role">Faculty advisor</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="hero-col demo-col">
-        <p class="eyebrow">Live product</p>
-        <h2 class="demo-heading">See it in action</h2>
-        <div class="demo-frame">
-          <!-- Replace this placeholder with an <img src="assets/demo.gif"> once you have it -->
-          <div class="demo-placeholder">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
-            <span>demo.gif goes here</span>
-          </div>
-        </div>
-        <!-- Replace href="#" with the live app-gbtac-dev URL -->
-        <a href="#" class="demo-btn" target="_blank" rel="noopener">
+    <div class="hero-inner reveal">
+      <p class="eyebrow">Team GTA VI &middot; ARK Net Zero Campus</p>
+      <h1 class="hero-heading">Energy intelligence for a net zero greenhouse</h1>
+      <p class="hero-sub">
+        Real-time dashboards, AI-powered Q&amp;A, and forecasting that turn raw sensor data
+        from the ARK Net Zero Campus into decisions anyone on the team can act on.
+      </p>
+      <div class="hero-cta-row">
+        <a href="https://app-gbtac-dev-hrcje8a5e3dhffek.canadacentral-01.azurewebsites.net/login" class="demo-btn" target="_blank" rel="noopener">
           View live demo
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
         </a>
+        <a href="#team" class="ghost-btn">Meet the team</a>
       </div>
 
+      <div class="demo-frame">
+        <!-- Replace this placeholder with an <img src="assets/demo.gif" alt="Live demo preview"> once you have it -->
+        <div class="demo-placeholder">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+          <span>demo.gif goes here</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <div class="flow-divider" role="img" aria-label="Sun to solar panel to data to insight">
+  <div class="flow-divider reveal" role="img" aria-label="Sun to sensors to data to insight">
     <span class="flow-node"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span>
     <span class="flow-line"></span>
     <span class="flow-node"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span>
@@ -119,12 +77,177 @@
     <span class="flow-node"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></span>
   </div>
 
-  <section class="model-section">
+  <!-- ---------- Site / greenhouse photo ---------- -->
+  <section class="model-section reveal">
     <p class="eyebrow">Site</p>
-    <h2 class="model-heading">The greenhouse</h2>
+    <h2 class="section-heading">The greenhouse</h2>
     <div class="model-frame">
       <img src="assets/GH.png" alt="ARK Net Zero Campus greenhouse">
     </div>
+  </section>
+
+  <!-- ---------- Features ---------- -->
+  <section class="features-section" id="features">
+    <div class="section-intro reveal">
+      <p class="eyebrow">What it does</p>
+      <h2 class="section-heading">Powerful features</h2>
+      <p class="section-sub">Everything the campus team needs to monitor, understand, and act on building performance.</p>
+    </div>
+
+    <ul class="feature-grid">
+      <li class="feature-card reveal">
+        <div class="feature-icon" style="--icon-tint: var(--c-green);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 19V10M10 19V5M16 19v-7M22 19H2"/></svg>
+        </div>
+        <h3 class="feature-title">Interactive Energy Dashboards</h3>
+        <p class="feature-desc">Real-time visual dashboards for energy consumption, solar generation, and system performance, powered by Power BI Embedded.</p>
+      </li>
+      <li class="feature-card reveal">
+        <div class="feature-icon" style="--icon-tint: var(--c-teal);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3 class="feature-title">AI-Powered Data Chat</h3>
+        <p class="feature-desc">Ask plain-English questions about your facility's data and get instant, accurate answers, no SQL required.</p>
+      </li>
+      <li class="feature-card reveal">
+        <div class="feature-icon" style="--icon-tint: var(--c-amber);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 17l5-6 4 3 5-7 4 5"/><path d="M17 6h4v4"/></svg>
+        </div>
+        <h3 class="feature-title">Automated Energy Forecasting</h3>
+        <p class="feature-desc">Predictive charts project upcoming energy use using historical sensor data, so you can plan ahead with confidence.</p>
+      </li>
+      <li class="feature-card reveal">
+        <div class="feature-icon" style="--icon-tint: var(--c-green);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17.5 19a4.5 4.5 0 0 0 0-9c-.28 0-.55.03-.81.08A6 6 0 0 0 5.1 12.1 4 4 0 0 0 6 20h11.5z"/></svg>
+        </div>
+        <h3 class="feature-title">Emissions Tracking Built In</h3>
+        <p class="feature-desc">Automatically calculates CO2 emissions using the local grid emission factor, turning raw energy data into environmental impact.</p>
+      </li>
+      <li class="feature-card reveal">
+        <div class="feature-icon" style="--icon-tint: var(--c-teal);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v2M5.6 5.6l1.4 1.4M3 12h2M17 12a5 5 0 0 0-10 0"/><path d="M15.5 19a3.5 3.5 0 0 0 0-7 4.7 4.7 0 0 0-9.1 1.6A3 3 0 0 0 7 19h8.5z"/></svg>
+        </div>
+        <h3 class="feature-title">Weather-Correlated Insights</h3>
+        <p class="feature-desc">Compares outdoor weather conditions against building performance to reveal how temperature and humidity affect energy use.</p>
+      </li>
+      <li class="feature-card reveal">
+        <div class="feature-icon" style="--icon-tint: var(--c-amber);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3 class="feature-title">Four-Tier Secure Access</h3>
+        <p class="feature-desc">Every user signs in through Microsoft, with SuperAdmin, Admin, Staff, and Viewer roles controlling exactly what they can see and do.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ---------- Screenshots / demo ---------- -->
+  <section class="shots-section" id="demo">
+    <div class="section-intro reveal">
+      <p class="eyebrow">Live product</p>
+      <h2 class="section-heading">See it in action</h2>
+      <p class="section-sub">A look at the dashboard, data chat, and forecasting views.</p>
+    </div>
+
+    <ul class="shots-grid">
+      <!-- Replace each placeholder with: <img class="shot-img" src="assets/screenshots/SC1.png" alt="..."> -->
+      <li class="shot reveal">
+        <div class="demo-placeholder">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+          <span>SC1.png goes here</span>
+        </div>
+      </li>
+      <li class="shot reveal">
+        <div class="demo-placeholder">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+          <span>SC2.png goes here</span>
+        </div>
+      </li>
+      <li class="shot reveal">
+        <div class="demo-placeholder">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+          <span>SC3.png goes here</span>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ---------- Tech stack ---------- -->
+  <section class="stack-section" id="stack">
+    <div class="section-intro reveal">
+      <p class="eyebrow">Under the hood</p>
+      <h2 class="section-heading">Built with</h2>
+      <p class="section-sub">A cloud-native stack running end to end on Azure.</p>
+    </div>
+
+    <ul class="chip-row reveal">
+      <li class="chip">React</li>
+      <li class="chip">Power BI Embedded</li>
+      <li class="chip">Azure Functions</li>
+      <li class="chip">Node.js</li>
+      <li class="chip">Azure SQL Database</li>
+      <li class="chip">Microsoft Entra ID</li>
+      <li class="chip">Azure AI Foundry (GPT-5-mini)</li>
+      <li class="chip">Recharts</li>
+      <li class="chip">Python &middot; ARIMA</li>
+      <li class="chip">Azure Service Bus</li>
+      <li class="chip">Azure Key Vault</li>
+      <li class="chip">GitHub Actions</li>
+    </ul>
+  </section>
+
+  <!-- ---------- Team ---------- -->
+  <section class="team-section" id="team">
+    <div class="section-intro reveal">
+      <p class="eyebrow">Who built it</p>
+      <h2 class="section-heading">Meet the team</h2>
+      <p class="section-sub">Built for the ARK Net Zero Campus, Aldersyde AB.</p>
+    </div>
+
+    <ul class="team-grid">
+      <li class="team-card reveal">
+        <div class="avatar" style="--avatar-tint: var(--c-amber);">AK</div>
+        <div class="team-info">
+          <p class="team-name">
+            Akash
+            <a href="https://www.linkedin.com/in/akashpatel29/" class="linkedin-icon" aria-label="Akash's LinkedIn" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
+            </a>
+          </p>
+          <p class="team-role">PM &middot; infrastructure &middot; full-stack</p>
+        </div>
+      </li>
+      <li class="team-card reveal">
+        <div class="avatar" style="--avatar-tint: var(--c-teal);">AS</div>
+        <div class="team-info">
+          <p class="team-name">
+            Aryan
+            <a href="https://www.linkedin.com/in/aryan-saini71/" class="linkedin-icon" aria-label="Aryan's LinkedIn" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
+            </a>
+          </p>
+          <p class="team-role">Backend &middot; ETL pipeline</p>
+        </div>
+      </li>
+      <li class="team-card reveal">
+        <div class="avatar" style="--avatar-tint: var(--c-green);">VP</div>
+        <div class="team-info">
+          <p class="team-name">
+            Vedant
+            <a href="https://www.linkedin.com/in/vedant-patel-aa2729325/" class="linkedin-icon" aria-label="Vedant's LinkedIn" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
+            </a>
+          </p>
+          <p class="team-role">Frontend &middot; Power BI</p>
+        </div>
+      </li>
+      <li class="team-card team-card--muted reveal">
+        <div class="avatar" style="--avatar-tint: var(--c-muted);">M</div>
+        <div class="team-info">
+          <p class="team-name">Mehdi</p>
+          <p class="team-role">Faculty advisor</p>
+        </div>
+      </li>
+    </ul>
   </section>
 
 </main>
@@ -132,6 +255,13 @@
 <footer class="site-footer">
   <p>GBTAC Energy Visualization &middot; SAIT capstone &middot; team GTA VI</p>
 </footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot preview" hidden>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <img id="lightboxImg" src="" alt="">
+</div>
 
 <script src="script.js"></script>
 </body>

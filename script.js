@@ -54,3 +54,59 @@
     if (e.key === 'Escape') closePopover();
   });
 })();
+
+// Scroll-reveal for elements marked .reveal
+(function () {
+  const targets = document.querySelectorAll('.reveal');
+  if (!targets.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('in-view'); });
+    return;
+  }
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  targets.forEach(function (el) { observer.observe(el); });
+})();
+
+// Lightbox for screenshot previews (.shot-img)
+(function () {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = document.getElementById('lightboxClose');
+  if (!lightbox || !lightboxImg || !closeBtn) return;
+
+  function open(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightbox.hidden = false;
+  }
+
+  function close() {
+    lightbox.hidden = true;
+    lightboxImg.src = '';
+  }
+
+  document.addEventListener('click', function (e) {
+    const img = e.target.closest('.shot-img');
+    if (img) {
+      open(img.currentSrc || img.src, img.alt);
+      return;
+    }
+    if (e.target === lightbox || e.target === closeBtn || closeBtn.contains(e.target)) {
+      close();
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !lightbox.hidden) close();
+  });
+})();

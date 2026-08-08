@@ -1,28 +1,34 @@
-# GBTAC Energy Visualization
+# GBTAC landing page
 
-## What this project is
+Plain HTML/CSS/JS, no build step. Deploys directly to GitHub Pages.
 
-A greenhouse collects years of sensor data in Excel files. This data was sitting unused.
+## Files
 
-We built a system that turns that raw data into six interactive dashboards, plus an AI assistant that can answer questions, write summaries, and forecast future energy use. The whole thing is secured with role-based access so only the right people see the right data.
+- `index.html` — page structure
+- `style.css` — all styling
+- `script.js` — bookmark popover logic, scroll-reveal animation, and the screenshot lightbox
+- `manifest.json` — lets the "Add to Home Screen" icon and name show correctly on Android
+- `assets/` — icon, demo gif, screenshots, and the greenhouse photo (`GH.png`) live here
 
-In simple words: we gave a greenhouse a voice. Excel files go in, clear answers come out.
+## Things to fill in
 
-## The team (GTA VI)
+1. **Demo gif** — in the hero, replace the placeholder `<div class="demo-placeholder">` block with:
+   ```html
+   <img src="assets/demo.gif" alt="Live demo preview">
+   ```
+   (the "View live demo" button already links to the real `app-gbtac-dev` URL).
+2. **Screenshots** — in the "See it in action" section, replace each `<div class="demo-placeholder">` tile with:
+   ```html
+   <img class="shot-img" src="assets/screenshots/SC1.png" alt="...">
+   ```
+   The lightbox in `script.js` picks up any `.shot-img` automatically — no JS changes needed.
+3. **Icons** — add `assets/icon-192.png` and `assets/icon-512.png` (square, your logo) so the home screen icon looks right instead of a blank default.
 
-- **Akash** — Project manager, infrastructure, full-stack development
-- **Aryan Saini** — Backend and data pipeline (ETL)
-- **Vedant Patel** — Frontend and Power BI dashboards
-- **Mehdi Shokrani** — Faculty advisor
+## Deploy to GitHub Pages
 
-Built as a SAIT Software Development Technology capstone project.
+1. Push this folder to a GitHub repo (or a subfolder of your existing `gbtac-visualization` repo).
+2. In the repo, go to Settings → Pages.
+3. Under "Source", pick the branch (e.g. `main`) and folder (`/` or `/docs`, wherever these files live).
+4. Save. GitHub gives you a URL like `https://akash-2911.github.io/gbtac-visualization/`.
 
-## What's in this repo
-
-This is the landing page for GBTAC, hosted on GitHub Pages. It has:
-
-- A "Meet the team" section with links to our LinkedIn
-- A live demo of the actual dashboard platform
-- A 3D look at the greenhouse (coming soon)
-
-For the full technical platform (dashboards, AI assistant, backend), see the main project repo.
+No build step, so any edit you push shows up on refresh.
