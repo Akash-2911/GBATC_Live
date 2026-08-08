@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GBTAC Energy Visualization</title>
+<meta name="description" content="GBTAC Energy Visualization — capstone project by team GTA VI, ARK Net Zero Campus.">
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icon-192.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <span class="logo">GBTAC<span class="logo-dot">.</span></span>
+    <button class="bookmark-btn" id="bookmarkBtn" aria-haspopup="true" aria-expanded="false">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      Save this page
+    </button>
+    <div class="bookmark-popover" id="bookmarkPopover" role="tooltip">
+      <p class="popover-title">If you like our work, bookmark this page</p>
+      <p class="popover-line" id="popoverInstruction">Loading instructions…</p>
+      <button class="popover-close" id="popoverClose" aria-label="Close">Got it</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-grid">
+
+      <div class="hero-col team-col">
+        <p class="eyebrow">Team GTA VI</p>
+        <h1 class="hero-heading">Meet the team</h1>
+        <p class="hero-sub">Built for the ARK Net Zero Campus, Aldersyde AB.</p>
+
+        <ul class="team-list">
+          <li class="team-card">
+            <div class="avatar" style="--avatar-tint: var(--c-amber);">AK</div>
+            <div class="team-info">
+              <p class="team-name">
+                Akash
+                <a href="https://www.linkedin.com/in/akashpatel29/" class="linkedin-icon" aria-label="Akash's LinkedIn" target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
+                </a>
+              </p>
+              <p class="team-role">PM · infrastructure · full-stack</p>
+            </div>
+          </li>
+          <li class="team-card">
+            <div class="avatar" style="--avatar-tint: var(--c-teal);">AS</div>
+            <div class="team-info">
+              <p class="team-name">
+                Aryan
+                <a href="https://www.linkedin.com/in/aryan-saini71/" class="linkedin-icon" aria-label="Aryan's LinkedIn" target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
+                </a>
+              </p>
+              <p class="team-role">Backend · ETL pipeline</p>
+            </div>
+          </li>
+          <li class="team-card">
+            <div class="avatar" style="--avatar-tint: var(--c-green);">VP</div>
+            <div class="team-info">
+              <p class="team-name">
+                Vedant
+                <a href="https://www.linkedin.com/in/vedant-patel-aa2729325/" class="linkedin-icon" aria-label="Vedant's LinkedIn" target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
+                </a>
+              </p>
+              <p class="team-role">Frontend · Power BI</p>
+            </div>
+          </li>
+          <li class="team-card team-card--muted">
+            <div class="avatar" style="--avatar-tint: var(--c-muted);">M</div>
+            <div class="team-info">
+              <p class="team-name">Mehdi</p>
+              <p class="team-role">Faculty advisor</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero-col demo-col">
+        <p class="eyebrow">Live product</p>
+        <h2 class="demo-heading">See it in action</h2>
+        <div class="demo-frame">
+          <!-- Replace this placeholder with an <img src="assets/demo.gif"> once you have it -->
+          <div class="demo-placeholder">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+            <span>demo.gif goes here</span>
+          </div>
+        </div>
+        <!-- Replace href="#" with the live app-gbtac-dev URL -->
+        <a href="#" class="demo-btn" target="_blank" rel="noopener">
+          View live demo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="flow-divider" role="img" aria-label="Sun to solar panel to data to insight">
+    <span class="flow-node"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span>
+    <span class="flow-line"></span>
+    <span class="flow-node"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span>
+    <span class="flow-line"></span>
+    <span class="flow-node"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 15l4-6 4 3 4-8"/></svg></span>
+    <span class="flow-line"></span>
+    <span class="flow-node"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></span>
+  </div>
+
+  <section class="model-section">
+    <p class="eyebrow">Site</p>
+    <h2 class="model-heading">The greenhouse</h2>
+    <div class="model-frame">
+      <img src="assets/GH.png" alt="ARK Net Zero Campus greenhouse">
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>GBTAC Energy Visualization &middot; SAIT capstone &middot; team GTA VI</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
