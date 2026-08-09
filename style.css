@@ -19,26 +19,35 @@
   --c-text-secondary: #5B6B80;
   --c-border: rgba(12, 35, 64, 0.13);
   --hero-gradient: linear-gradient(160deg, #FBF7EE 0%, #EBF7EF 52%, #DEF2E7 100%);
+  --page-gradient: linear-gradient(180deg, #FBF7EE 0%, #ECF8F1 32%, #DFF3E7 62%, #EEF8EF 100%);
 
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
 
   --leaf-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 6C27 16 14 42 22 68c10 20 34 28 52 18 16-10 22-32 14-52C81 18 66 4 50 6Z' fill='none' stroke='%231E7A46' stroke-width='2.5'/%3E%3Cpath d='M32 24C50 34 62 54 66 82' fill='none' stroke='%231E7A46' stroke-width='2'/%3E%3C/svg%3E");
+  --grass-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'%3E%3Cpath d='M5 30C3 20 6 11 8 3c2 8 4 17 2 27Z' fill='%231E7A46'/%3E%3Cpath d='M15 30C13 17 17 8 19 1c2 9 5 18 2 29Z' fill='%232FAE68'/%3E%3Cpath d='M26 30C24 19 27 10 29 3c2 8 4 17 2 27Z' fill='%231E7A46'/%3E%3Cpath d='M35 30C33 22 36 14 37 8c1 7 3 15 1 22Z' fill='%232FAE68'/%3E%3C/svg%3E");
 }
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  background-color: var(--c-bg);
-  background-image: radial-gradient(circle, rgba(12, 35, 64, 0.05) 1px, transparent 1.6px);
-  background-size: 22px 22px;
+  background-color: var(--c-mint);
+  background-image: var(--page-gradient), radial-gradient(circle, rgba(12, 35, 64, 0.05) 1px, transparent 1.6px);
+  background-repeat: no-repeat, repeat;
+  background-attachment: fixed, local;
+  background-size: cover, 22px 22px;
   color: var(--c-text);
   font-family: var(--font-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+@media (max-width: 760px) {
+  /* Fixed backgrounds can jank on mobile Safari; let it scroll with content there instead. */
+  body { background-attachment: scroll, local; }
 }
 
 h1, h2, h3 { font-family: var(--font-display); margin: 0; letter-spacing: -0.01em; color: var(--c-navy); }
@@ -418,7 +427,19 @@ ul { list-style: none; margin: 0; padding: 0; }
   height: 70px;
 }
 
-.wave-divider path { fill: var(--c-bg); }
+.wave-divider path { fill: #FBF7EE; }
+
+/* ---------- Grass strip (hero -> flow-divider seam) ---------- */
+
+.grass-strip {
+  height: 26px;
+  margin-top: -3px;
+  background-image: var(--grass-svg);
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: 40px 26px;
+  opacity: 0.55;
+}
 
 /* ---------- Flow divider (signature element) ---------- */
 
@@ -470,15 +491,33 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* ---------- Site / greenhouse section ---------- */
 
 .model-section {
+  position: relative;
   max-width: 1080px;
   margin: 0 auto;
   padding: 24px 24px 24px;
   text-align: center;
+  overflow: hidden;
+}
+
+.model-section::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 8px;
+  width: 64px;
+  height: 64px;
+  background-image: var(--leaf-svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.16;
+  transform: rotate(52deg);
+  pointer-events: none;
 }
 
 .model-section .section-heading { margin-bottom: 20px; }
 
 .model-frame {
+  position: relative;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--c-border);
@@ -573,6 +612,12 @@ ul { list-style: none; margin: 0; padding: 0; }
   gap: 18px;
 }
 
+.shots-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
 .shot {
   border-radius: 14px;
   overflow: hidden;
@@ -635,9 +680,26 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* ---------- Tech stack (marquee) ---------- */
 
 .stack-section {
+  position: relative;
   max-width: 1120px;
   margin: 0 auto;
   padding: 72px 24px;
+  overflow: hidden;
+}
+
+.stack-section::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -18px;
+  width: 70px;
+  height: 70px;
+  background-image: var(--leaf-svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.12;
+  transform: rotate(-30deg) scaleX(-1);
+  pointer-events: none;
 }
 
 .marquee {
