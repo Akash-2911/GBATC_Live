@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GBTAC Energy Visualization</title>
-<meta name="description" content="GBTAC Energy Visualization — capstone project by team GTA VI, ARK Net Zero Campus.">
+<meta name="description" content="GBTAC Energy Visualization — capstone project by team GTA VI, for a net-zero greenhouse operation.">
 
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon-192.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -27,7 +27,9 @@
       <a href="#team">Team</a>
     </nav>
     <button class="bookmark-btn" id="bookmarkBtn" aria-haspopup="true" aria-expanded="false">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      <span class="badge-circle">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      </span>
       Save this page
     </button>
     <div class="bookmark-popover" id="bookmarkPopover" role="tooltip">
@@ -43,11 +45,11 @@
   <!-- ---------- Hero ---------- -->
   <section class="hero">
     <div class="hero-inner reveal">
-      <p class="eyebrow">Team GTA VI &middot; ARK Net Zero Campus</p>
+      <p class="eyebrow">Team GTA VI &middot; GBTAC</p>
       <h1 class="hero-heading">Energy intelligence for a net zero greenhouse</h1>
       <p class="hero-sub">
         Real-time dashboards, AI-powered Q&amp;A, and forecasting that turn raw sensor data
-        from the ARK Net Zero Campus into decisions anyone on the team can act on.
+        from a net-zero greenhouse operation into decisions anyone on the team can act on.
       </p>
       <div class="hero-cta-row">
         <a href="https://app-gbtac-dev-hrcje8a5e3dhffek.canadacentral-01.azurewebsites.net/login" class="demo-btn" target="_blank" rel="noopener">
@@ -82,7 +84,7 @@
     <p class="eyebrow">Site</p>
     <h2 class="section-heading">The greenhouse</h2>
     <div class="model-frame">
-      <img src="assets/GH.png" alt="ARK Net Zero Campus greenhouse">
+      <img src="assets/GH.png" alt="The GBTAC net-zero greenhouse">
     </div>
   </section>
 
@@ -179,20 +181,41 @@
       <p class="section-sub">A cloud-native stack running end to end on Azure.</p>
     </div>
 
-    <ul class="chip-row reveal">
-      <li class="chip">React</li>
-      <li class="chip">Power BI Embedded</li>
-      <li class="chip">Azure Functions</li>
-      <li class="chip">Node.js</li>
-      <li class="chip">Azure SQL Database</li>
-      <li class="chip">Microsoft Entra ID</li>
-      <li class="chip">Azure AI Foundry (GPT-5-mini)</li>
-      <li class="chip">Recharts</li>
-      <li class="chip">Python &middot; ARIMA</li>
-      <li class="chip">Azure Service Bus</li>
-      <li class="chip">Azure Key Vault</li>
-      <li class="chip">GitHub Actions</li>
+    <ul class="stack-row reveal">
+      <li class="stack-item">
+        <span class="stack-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6.5 18a4 4 0 0 1-.8-7.92A5.5 5.5 0 0 1 16.2 8.1 4.5 4.5 0 0 1 17.5 18h-11z"/></svg></span>
+        <span class="stack-label">Azure</span>
+      </li>
+      <li class="stack-item">
+        <span class="stack-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></svg></span>
+        <span class="stack-label">React</span>
+      </li>
+      <li class="stack-item">
+        <span class="stack-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="12" width="4" height="8"/><rect x="10" y="7" width="4" height="13"/><rect x="16" y="3" width="4" height="17"/></svg></span>
+        <span class="stack-label">Power BI</span>
+      </li>
+      <li class="stack-item">
+        <span class="stack-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5V18a8 3 0 0 0 16 0V5.5"/><path d="M4 11.75a8 3 0 0 0 16 0"/></svg></span>
+        <span class="stack-label">Azure SQL</span>
+      </li>
+      <li class="stack-item">
+        <span class="stack-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z" stroke-linejoin="round"/></svg></span>
+        <span class="stack-label">Azure Functions</span>
+      </li>
+      <li class="stack-item">
+        <span class="stack-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <span class="stack-label">Entra ID</span>
+      </li>
+      <li class="stack-item">
+        <span class="stack-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="7" cy="6" r="2.5"/><circle cx="7" cy="18" r="2.5"/><circle cx="17" cy="12" r="2.5"/><path d="M7 8.5V15.5M9.2 11l5.5-.5"/></svg></span>
+        <span class="stack-label">GitHub Actions</span>
+      </li>
+      <li class="stack-item">
+        <span class="stack-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/><circle cx="12" cy="12" r="4"/></svg></span>
+        <span class="stack-label">Azure AI Foundry</span>
+      </li>
     </ul>
+    <p class="stack-note reveal">Also in the stack: Recharts &middot; Python (ARIMA) &middot; Azure Service Bus &middot; Azure Key Vault &middot; Node.js</p>
   </section>
 
   <!-- ---------- Team ---------- -->
@@ -200,44 +223,41 @@
     <div class="section-intro reveal">
       <p class="eyebrow">Who built it</p>
       <h2 class="section-heading">Meet the team</h2>
-      <p class="section-sub">Built for the ARK Net Zero Campus, Aldersyde AB.</p>
+      <p class="section-sub">Built for a net-zero greenhouse operation.</p>
     </div>
 
     <ul class="team-grid">
       <li class="team-card reveal">
         <div class="avatar" style="--avatar-tint: var(--c-amber);">AK</div>
         <div class="team-info">
-          <p class="team-name">
-            Akash
-            <a href="https://www.linkedin.com/in/akashpatel29/" class="linkedin-icon" aria-label="Akash's LinkedIn" target="_blank" rel="noopener">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
-            </a>
-          </p>
+          <p class="team-name">Akash</p>
           <p class="team-role">PM &middot; infrastructure &middot; full-stack</p>
+          <a href="https://www.linkedin.com/in/akashpatel29/" class="linkedin-btn" aria-label="Akash's LinkedIn" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
+            LinkedIn
+          </a>
         </div>
       </li>
       <li class="team-card reveal">
         <div class="avatar" style="--avatar-tint: var(--c-teal);">AS</div>
         <div class="team-info">
-          <p class="team-name">
-            Aryan
-            <a href="https://www.linkedin.com/in/aryan-saini71/" class="linkedin-icon" aria-label="Aryan's LinkedIn" target="_blank" rel="noopener">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
-            </a>
-          </p>
+          <p class="team-name">Aryan</p>
           <p class="team-role">Backend &middot; ETL pipeline</p>
+          <a href="https://www.linkedin.com/in/aryan-saini71/" class="linkedin-btn" aria-label="Aryan's LinkedIn" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
+            LinkedIn
+          </a>
         </div>
       </li>
       <li class="team-card reveal">
         <div class="avatar" style="--avatar-tint: var(--c-green);">VP</div>
         <div class="team-info">
-          <p class="team-name">
-            Vedant
-            <a href="https://www.linkedin.com/in/vedant-patel-aa2729325/" class="linkedin-icon" aria-label="Vedant's LinkedIn" target="_blank" rel="noopener">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
-            </a>
-          </p>
+          <p class="team-name">Vedant</p>
           <p class="team-role">Frontend &middot; Power BI</p>
+          <a href="https://www.linkedin.com/in/vedant-patel-aa2729325/" class="linkedin-btn" aria-label="Vedant's LinkedIn" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
+            LinkedIn
+          </a>
         </div>
       </li>
       <li class="team-card team-card--muted reveal">
