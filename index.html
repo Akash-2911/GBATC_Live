@@ -11,7 +11,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -43,29 +43,42 @@
 <main>
 
   <!-- ---------- Hero ---------- -->
-  <section class="hero">
+  <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="blob blob-a"></span>
+      <span class="blob blob-b"></span>
+      <span class="blob blob-c"></span>
+      <span class="hero-grid"></span>
+    </div>
+
     <div class="hero-inner reveal">
-      <p class="eyebrow">Team GTA VI &middot; GBTAC</p>
-      <h1 class="hero-heading">Energy intelligence for a net zero greenhouse</h1>
-      <p class="hero-sub">
+      <p class="eyebrow eyebrow-dark">Team GTA VI &middot; GBTAC</p>
+      <h1 class="hero-heading">Energy intelligence for a <span class="grad-text">net zero</span> greenhouse</h1>
+      <p class="hero-sub hero-sub-dark">
         Real-time dashboards, AI-powered Q&amp;A, and forecasting that turn raw sensor data
         from a net-zero greenhouse operation into decisions anyone on the team can act on.
       </p>
       <div class="hero-cta-row">
         <a href="https://app-gbtac-dev-hrcje8a5e3dhffek.canadacentral-01.azurewebsites.net/login" class="demo-btn" target="_blank" rel="noopener">
+          <span class="live-dot" aria-hidden="true"></span>
           View live demo
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
         </a>
-        <a href="#team" class="ghost-btn">Meet the team</a>
+        <a href="#team" class="ghost-btn ghost-btn-dark">Meet the team</a>
       </div>
 
       <div class="demo-frame">
+        <div class="frame-chrome" aria-hidden="true"><span></span><span></span><span></span></div>
         <!-- Replace this placeholder with an <img src="assets/demo.gif" alt="Live demo preview"> once you have it -->
         <div class="demo-placeholder">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
           <span>demo.gif goes here</span>
         </div>
       </div>
+    </div>
+
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,40 C240,90 480,0 720,30 C960,60 1200,100 1440,50 L1440,100 L0,100 Z"></path></svg>
     </div>
   </section>
 
@@ -97,14 +110,14 @@
     </div>
 
     <ul class="feature-grid">
-      <li class="feature-card reveal">
+      <li class="feature-card feature-card--big reveal">
         <div class="feature-icon" style="--icon-tint: var(--c-green);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 19V10M10 19V5M16 19v-7M22 19H2"/></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 19V10M10 19V5M16 19v-7M22 19H2"/></svg>
         </div>
         <h3 class="feature-title">Interactive Energy Dashboards</h3>
         <p class="feature-desc">Real-time visual dashboards for energy consumption, solar generation, and system performance, powered by Power BI Embedded.</p>
       </li>
-      <li class="feature-card reveal">
+      <li class="feature-card feature-card--wide reveal">
         <div class="feature-icon" style="--icon-tint: var(--c-teal);">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </div>
@@ -125,14 +138,14 @@
         <h3 class="feature-title">Emissions Tracking Built In</h3>
         <p class="feature-desc">Automatically calculates CO2 emissions using the local grid emission factor, turning raw energy data into environmental impact.</p>
       </li>
-      <li class="feature-card reveal">
+      <li class="feature-card feature-card--wide reveal">
         <div class="feature-icon" style="--icon-tint: var(--c-teal);">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v2M5.6 5.6l1.4 1.4M3 12h2M17 12a5 5 0 0 0-10 0"/><path d="M15.5 19a3.5 3.5 0 0 0 0-7 4.7 4.7 0 0 0-9.1 1.6A3 3 0 0 0 7 19h8.5z"/></svg>
         </div>
         <h3 class="feature-title">Weather-Correlated Insights</h3>
         <p class="feature-desc">Compares outdoor weather conditions against building performance to reveal how temperature and humidity affect energy use.</p>
       </li>
-      <li class="feature-card reveal">
+      <li class="feature-card feature-card--wide reveal">
         <div class="feature-icon" style="--icon-tint: var(--c-amber);">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/><path d="M9 12l2 2 4-4"/></svg>
         </div>
@@ -151,20 +164,23 @@
     </div>
 
     <ul class="shots-grid">
-      <!-- Replace each placeholder with: <img class="shot-img" src="assets/screenshots/SC1.png" alt="..."> -->
+      <!-- Each .shot wraps a browser-chrome frame; replace the .demo-placeholder inside with: <img class="shot-img" src="assets/screenshots/SC1.png" alt="..."> -->
       <li class="shot reveal">
+        <div class="frame-chrome" aria-hidden="true"><span></span><span></span><span></span></div>
         <div class="demo-placeholder">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
           <span>SC1.png goes here</span>
         </div>
       </li>
       <li class="shot reveal">
+        <div class="frame-chrome" aria-hidden="true"><span></span><span></span><span></span></div>
         <div class="demo-placeholder">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
           <span>SC2.png goes here</span>
         </div>
       </li>
       <li class="shot reveal">
+        <div class="frame-chrome" aria-hidden="true"><span></span><span></span><span></span></div>
         <div class="demo-placeholder">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
           <span>SC3.png goes here</span>
@@ -181,41 +197,42 @@
       <p class="section-sub">A cloud-native stack running end to end on Azure.</p>
     </div>
 
-    <ul class="stack-row reveal">
-      <li class="stack-item">
-        <span class="stack-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6.5 18a4 4 0 0 1-.8-7.92A5.5 5.5 0 0 1 16.2 8.1 4.5 4.5 0 0 1 17.5 18h-11z"/></svg></span>
-        <span class="stack-label">Azure</span>
-      </li>
-      <li class="stack-item">
-        <span class="stack-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></svg></span>
-        <span class="stack-label">React</span>
-      </li>
-      <li class="stack-item">
-        <span class="stack-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="12" width="4" height="8"/><rect x="10" y="7" width="4" height="13"/><rect x="16" y="3" width="4" height="17"/></svg></span>
-        <span class="stack-label">Power BI</span>
-      </li>
-      <li class="stack-item">
-        <span class="stack-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5V18a8 3 0 0 0 16 0V5.5"/><path d="M4 11.75a8 3 0 0 0 16 0"/></svg></span>
-        <span class="stack-label">Azure SQL</span>
-      </li>
-      <li class="stack-item">
-        <span class="stack-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z" stroke-linejoin="round"/></svg></span>
-        <span class="stack-label">Azure Functions</span>
-      </li>
-      <li class="stack-item">
-        <span class="stack-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
-        <span class="stack-label">Entra ID</span>
-      </li>
-      <li class="stack-item">
-        <span class="stack-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="7" cy="6" r="2.5"/><circle cx="7" cy="18" r="2.5"/><circle cx="17" cy="12" r="2.5"/><path d="M7 8.5V15.5M9.2 11l5.5-.5"/></svg></span>
-        <span class="stack-label">GitHub Actions</span>
-      </li>
-      <li class="stack-item">
-        <span class="stack-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/><circle cx="12" cy="12" r="4"/></svg></span>
-        <span class="stack-label">Azure AI Foundry</span>
-      </li>
-    </ul>
-    <p class="stack-note reveal">Also in the stack: Recharts &middot; Python (ARIMA) &middot; Azure Service Bus &middot; Azure Key Vault &middot; Node.js</p>
+    <div class="marquee reveal">
+      <div class="marquee-fade marquee-fade--left" aria-hidden="true"></div>
+      <div class="marquee-fade marquee-fade--right" aria-hidden="true"></div>
+      <div class="marquee-track">
+        <ul class="marquee-set" aria-hidden="false">
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6.5 18a4 4 0 0 1-.8-7.92A5.5 5.5 0 0 1 16.2 8.1 4.5 4.5 0 0 1 17.5 18h-11z"/></svg></span><span class="stack-label">Azure</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></svg></span><span class="stack-label">React</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="12" width="4" height="8"/><rect x="10" y="7" width="4" height="13"/><rect x="16" y="3" width="4" height="17"/></svg></span><span class="stack-label">Power BI Embedded</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2 4 14h6l-1 8 9-12h-6z" stroke-linejoin="round"/></svg></span><span class="stack-label">Azure Functions</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c-3.5 3-3.5 15 0 18M12 3c3.5 3 3.5 15 0 18M3 12h18" /><ellipse cx="12" cy="12" rx="9" ry="4"/></svg></span><span class="stack-label">Node.js</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5V18a8 3 0 0 0 16 0V5.5"/><path d="M4 11.75a8 3 0 0 0 16 0"/></svg></span><span class="stack-label">Azure SQL Database</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="stack-label">Microsoft Entra ID</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/><circle cx="12" cy="12" r="4"/></svg></span><span class="stack-label">Azure AI Foundry</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17l4-9 3 5 3-8 4 6 4-3" /></svg></span><span class="stack-label">Recharts</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15c3-8 6-8 8 0s5 8 8 0" /></svg></span><span class="stack-label">Python &middot; ARIMA</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="9" width="18" height="6" rx="3"/><path d="M7 9v6M12 9v6M17 9v6" /></svg></span><span class="stack-label">Azure Service Bus</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="4"/><path d="M11 11 20 20M15 16l3-3M18 19l3-3" /></svg></span><span class="stack-label">Azure Key Vault</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="6" r="2.5"/><circle cx="7" cy="18" r="2.5"/><circle cx="17" cy="12" r="2.5"/><path d="M7 8.5V15.5M9.2 11l5.5-.5"/></svg></span><span class="stack-label">GitHub Actions</span></li>
+        </ul>
+        <ul class="marquee-set" aria-hidden="true">
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6.5 18a4 4 0 0 1-.8-7.92A5.5 5.5 0 0 1 16.2 8.1 4.5 4.5 0 0 1 17.5 18h-11z"/></svg></span><span class="stack-label">Azure</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></svg></span><span class="stack-label">React</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="12" width="4" height="8"/><rect x="10" y="7" width="4" height="13"/><rect x="16" y="3" width="4" height="17"/></svg></span><span class="stack-label">Power BI Embedded</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2 4 14h6l-1 8 9-12h-6z" stroke-linejoin="round"/></svg></span><span class="stack-label">Azure Functions</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c-3.5 3-3.5 15 0 18M12 3c3.5 3 3.5 15 0 18M3 12h18" /><ellipse cx="12" cy="12" rx="9" ry="4"/></svg></span><span class="stack-label">Node.js</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5V18a8 3 0 0 0 16 0V5.5"/><path d="M4 11.75a8 3 0 0 0 16 0"/></svg></span><span class="stack-label">Azure SQL Database</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="stack-label">Microsoft Entra ID</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/><circle cx="12" cy="12" r="4"/></svg></span><span class="stack-label">Azure AI Foundry</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17l4-9 3 5 3-8 4 6 4-3" /></svg></span><span class="stack-label">Recharts</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15c3-8 6-8 8 0s5 8 8 0" /></svg></span><span class="stack-label">Python &middot; ARIMA</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="9" width="18" height="6" rx="3"/><path d="M7 9v6M12 9v6M17 9v6" /></svg></span><span class="stack-label">Azure Service Bus</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="4"/><path d="M11 11 20 20M15 16l3-3M18 19l3-3" /></svg></span><span class="stack-label">Azure Key Vault</span></li>
+          <li class="stack-item"><span class="stack-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="6" r="2.5"/><circle cx="7" cy="18" r="2.5"/><circle cx="17" cy="12" r="2.5"/><path d="M7 8.5V15.5M9.2 11l5.5-.5"/></svg></span><span class="stack-label">GitHub Actions</span></li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <!-- ---------- Team ---------- -->
@@ -273,7 +290,20 @@
 </main>
 
 <footer class="site-footer">
-  <p>GBTAC Energy Visualization &middot; SAIT capstone &middot; team GTA VI</p>
+  <div class="footer-bg" aria-hidden="true">
+    <span class="blob blob-a footer-blob-a"></span>
+    <span class="blob blob-c footer-blob-c"></span>
+  </div>
+  <div class="footer-inner">
+    <p class="footer-eyebrow">Ready to take a look?</p>
+    <h2 class="footer-heading">See GBTAC in action</h2>
+    <a href="https://app-gbtac-dev-hrcje8a5e3dhffek.canadacentral-01.azurewebsites.net/login" class="demo-btn" target="_blank" rel="noopener">
+      <span class="live-dot" aria-hidden="true"></span>
+      View live demo
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+    </a>
+    <p class="footer-credit">GBTAC Energy Visualization &middot; SAIT capstone &middot; team GTA VI</p>
+  </div>
 </footer>
 
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot preview" hidden>
