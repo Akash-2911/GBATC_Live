@@ -77,6 +77,16 @@
   targets.forEach(function (el) { observer.observe(el); });
 })();
 
+// Stop ctrl+wheel (trackpad pinch) over the 3D model from zooming the browser page
+(function () {
+  const frame = document.querySelector('.model-frame');
+  if (!frame) return;
+
+  frame.addEventListener('wheel', function (e) {
+    if (e.ctrlKey) e.preventDefault();
+  }, { passive: false });
+})();
+
 // Lightbox for screenshot previews (.shot-img)
 (function () {
   const lightbox = document.getElementById('lightbox');
